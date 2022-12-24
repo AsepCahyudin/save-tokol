@@ -1,19 +1,45 @@
 <template>
     <div class="home">
     <HeaderTokol/>
+    
     <!-- Hero Section Begin -->
     <section class="hero-section">
-        <carousel>
+        <carousel :items-to-show="1">
+        
+        <slide class="single-hero-items set-bg" style="background-image: url('/img/hero-1.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <span>Bag,kids</span>
+                        <h1>Black friday</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                        </p>
+                        <a href="#" class="primary-btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </slide>
+        <slide class="single-hero-items set-bg" style="background-image: url('/img/hero-2.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <span>Bag,kids</span>
+                        <h1>Black friday</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                        </p>
+                        <a href="#" class="primary-btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </slide>
 
-<img src="https://placeimg.com/200/200/any?1">
-
-<img src="https://placeimg.com/200/200/any?2">
-
-<img src="https://placeimg.com/200/200/any?3">
-
-<img src="https://placeimg.com/200/200/any?4">
-
-</carousel>
+    <template #addons>
+      <navigation />
+      <pagination />
+    </template>
+  </carousel>
     </section>
     <!-- Hero Section End -->
 
@@ -21,13 +47,21 @@
     </div>
 </template>
 
+
+
 <script>
     // @ is an alias to /src import HelloWorld from '@/components/HelloWorld.vue'
     import HeaderTokol from '@/components/HeaderTokol.vue';
-    import carousel from 'vue-owl-carousel';
+    // import carousel from 'vue-owl-carousel';
+    import 'vue3-carousel/dist/carousel.css';
+    import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel';
+
 
     export default {name: 'HomeView', components: {
             HeaderTokol,
-            carousel,
+            Carousel,
+            Slide,
+            Navigation,
+            Pagination,
         }}
 </script>
